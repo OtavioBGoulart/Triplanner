@@ -1,7 +1,17 @@
+import { useState } from "react";
 import { DestinationandDateSteps } from "./steps/destination-and-date-step";
 import { InviteGuestsSteps } from "./steps/invite-guests-step";
 
 export function CreateTripPage() {
+    const [isGuestsInputOpen, setIsGuestsInputOpen] = useState(false);
+
+    function openGuestsInput() {
+        setIsGuestsInputOpen(true)
+    }
+
+    function closeGuestsInput() {
+        setIsGuestsInputOpen(false)
+    }
 
     return (
         <div className="h-screen flex items-center justify-center bg-pattern bg-no-repeat bg-center">
@@ -11,8 +21,8 @@ export function CreateTripPage() {
                     <h1 className="text-zinc-300">Convide seus amigos e planejem sua próxima viagem</h1>
                 </div>
                 <div className="flex flex-col gap-3">
-                    <DestinationandDateSteps />
-                    <InviteGuestsSteps />
+                    <DestinationandDateSteps isGuestsInputOpen={isGuestsInputOpen} openGuestsInput={openGuestsInput} closeGuestsInput={closeGuestsInput} />
+                    {isGuestsInputOpen && <InviteGuestsSteps />}
                 </div>
                 <p className="text-zinc-500 text-sm">Ao planejar a viagem pela plann.er você automaticamente concorda<br />
                     com nossos
