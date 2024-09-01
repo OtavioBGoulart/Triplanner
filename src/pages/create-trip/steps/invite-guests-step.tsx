@@ -1,4 +1,5 @@
 import { UserRoundPlus, ArrowRight } from "lucide-react";
+import { Button } from "../../../components/button";
 
 export function InviteGuestsSteps() {
     return (
@@ -11,10 +12,10 @@ export function InviteGuestsSteps() {
                 </span>
             </button>
 
-            <button className="flex items-center justify-center px-5 py-2 font-medium gap-2 rounded-lg text-lime-950 bg-lime-300 hover:bg-lime-400">
+            <Button variant="primary">
                 Confirmar viagem
                 <ArrowRight className="size-5" />
-            </button>
+            </Button>
 
         </div>
     )
