@@ -62,7 +62,7 @@ export function DestinationandDateSteps({ isGuestsInputOpen, openGuestsInput, cl
                                 selected: 'bg-lime-300 text-zinc-50', // Estilo para os dias selecionados
                                 today: 'border border-lime-950', // Estilo para o dia atual
                                 range_start: 'bg-green-500 text-white', // Primeiro dia do intervalo
-                                range_end: 'bg-red-500 text-white', // Último dia do intervalo
+                                range_end: 'bg-red-400 text-white', // Último dia do intervalo
                             }}
                             className="text-zinc-50" // Estilo de cor global do texto
                             styles={{
